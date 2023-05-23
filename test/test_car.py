@@ -9,7 +9,33 @@ from engine.model.thovex import Thovex
 from engine.model import capulet_engine
 from engine.model import sternman_engine
 from engine.model import willoughby_engine
+from tires import  Carrigantires
+from tires import Octoprimetires
 
+
+class TestCarrigantires:
+    def test_Carrigantires_should_be_serviced(self):
+        tire_wear_array>=0.9
+
+        tires=tires(tire_wear_array)
+        self.assertTrue(tires.needs_service())
+
+    def test_Carrigantires_should_not_be_serviced(self):
+        tire_wear_array<=0.9
+
+        tires=tires(tire_wear_array)
+        self.assertFalse(tires.needs_service())
+
+class TestOctoprimetires:
+    def test_Octoprimetires_should_be_serviced(self):
+        if sum(tire_wear_array)>=3:
+            tires=tires(tires.needs_service())
+            self.assertTrue(tires.needs_service())
+
+    def test_Octoprimetires_should_not_be_serviced(self):
+        if sum(tire_wear_array)<=3:
+            tires=tires(tires.needs_service(self))
+            self.assertFalse(tires.needs_service())
 
 
 
@@ -67,6 +93,7 @@ class TestWilloughby_engine(unittest.TestCase):
 
 class TestNubbinBattery:
     def test_battery_should_be_serviced(self)
+        
         last_service_date = today.replace(year=today.year - 5)
         current_service_date = datetime.today().date()
 
